@@ -1,0 +1,208 @@
+/* swiper */
+swiper-container.mySwiper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: -100;     */
+}
+
+swiper-slide.wrap_slide {
+    /* background-color: aquamarine; */
+}
+
+swiper-slide.wrap_slide img {
+    display: block;
+    width: 100%;
+    height: 960px;
+    /* object-fit: cover; */
+}
+
+.main_wrap .header_title {
+    color: #fff;
+    margin-bottom: 240px;
+    margin-left: 270px;
+    
+    position: absolute;
+    bottom: 0;
+}
+
+.main_wrap > .header_title h1 {
+    font-size: 4.3rem;
+    letter-spacing: 1.6px;
+}
+
+.main_wrap > .header_title h5 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-left: 16px;
+}
+
+/* Main Container */
+/* 기술분야 */
+#main_container {
+    position: relative;
+    top: 1000px;
+    margin-bottom: 200px;
+    height: auto;
+    width: 100%;
+}
+
+.technical_field {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 타이틀 */
+.container_title {
+    margin-bottom: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container_title h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #1C417A;
+    margin-bottom: 10px;
+}
+
+.container_title p {
+    font-size: 2.5rem;
+    color: #333333;
+    font-weight: 900;
+
+    margin-bottom: 100px;
+}
+
+/* 기술 분야 설명 */
+.technical_field {
+    margin-bottom: 120px;
+}
+
+.technical_field .field_area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.technical_field .field_area .field_card {
+    width: 360px;
+    height: 430px;
+    background-color: #1C417A;
+
+    margin-bottom: 150px;
+}
+
+.technical_field .field_area .field_card .field_text {
+
+    color: #fff;
+    margin: 60px 0;
+}
+
+.technical_field .field_area .field_card .field_text h3 {
+    margin-bottom: 35px;
+    text-align: center;
+
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.technical_field .field_area .field_card .field_text p {
+    margin-bottom: 35px;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 10px 50px;
+    line-height: 36px;
+}
+
+/* 가동 전 후 이미지 */
+.technical_field {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.technical_field .technical_around {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.technical_field .technical_around .around_text {
+    padding: 20px 0;
+}
+
+.technical_field .technical_around .around_text h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+
+
+/* 메인 제품 */
+.product_field {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 두번째 swiper CSS */
+swiper-container.mySwiper2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+swiper-slide.wrap_slide2 .bg_img {
+    width: 250px;
+    height: 250px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+swiper-slide.wrap_slide2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+
+    transition: transform 0.3s ease;
+}
+
+.product_title {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 46%;
+
+    /* overlay */
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.6em;
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.main_wrap:hover .overlay,
+.main_wrap:hover .product_title {
+    opacity: 1; /* Show overlay and title on hover */
+    display: block; /* Ensure title is visible */
+}
