@@ -135,6 +135,142 @@ ul { list-style: none; }
     display: block;
 }
 
+/* Mobile Screen ================================================== */
+#mobile_menu {
+    display: none;
+    position: fixed;
+    top: 60px; /* Adjusted based on header height */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#mobile_menu .mobile_nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mobile_menu .mobile_nav > li {
+    border-bottom: 1px solid #ddd;
+}
+
+#mobile_menu .mobile_nav > li > a {
+    display: block;
+    padding: 15px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+#mobile_menu .mobile_drop {
+    /* display: none; */
+    background: #f8f8f8;
+}
+
+#mobile_menu .mobile_drop > li > a {
+    padding: 10px;
+}
+
+#mobile_menu .mobile_drop li {
+    border-bottom: 1px solid #ddd;
+}
+
+/* 초기 햄버거 아이콘 */
+#hamburger {
+    display: none;
+}
+
+#hamburger .fa-bars:before {
+    content: "\f0c9"; /* fa-bars 아이콘 코드 */
+}
+
+/* 닫기 아이콘 (xmark) */
+#hamburger .fa-xmark:before {
+    content: "\f00d"; /* fa-xmark 아이콘 코드 */
+}
+
+/* 햄버거 메뉴 활성화 상태 */
+.show_mobile_menu #hamburger .fa-bars {
+    display: none; /* 햄버거 아이콘 숨김 */
+}
+
+.show_mobile_menu #hamburger .fa-xmark {
+    display: inline; /* 닫기 아이콘 표시 */
+}
+
+/* 모바일 메뉴 보이기 */
+@media (max-width: 640px) {
+    .header_nav .nav_gnb {
+        display: none; /* 기존 메뉴 숨기기 */
+    }
+
+    #hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+     /* 모바일 메뉴가 활성화되면 햄버거 메뉴 아이콘 숨기고 xmark 아이콘 보이기 */
+     .show_mobile_menu #hamburger .fa-bars {
+        display: none;
+    }
+
+    .show_mobile_menu #hamburger .fa-xmark {
+        display: inline;
+    }
+
+    #mobile_menu {
+        display: none;
+        
+    }
+
+    #mobile_menu ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    #mobile_menu ul li {
+        border-bottom: 1px solid #ddd;
+    }
+
+    #mobile_menu ul li a {
+        display: block;
+        padding: 15px;
+        font-size: 1.6em;
+        color: #333;
+        text-align: center;
+    }
+
+    /* 모바일 드롭다운 메뉴 스타일 */
+    .mobile_drop {
+        display: none;
+        padding: 0;
+    }
+
+    .mobile_drop > li {
+        position: relative;
+    }
+
+    .mobile_drop li {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .mobile_nav > li.active .mobile_drop {
+    display: block; 
+}
+
+    .mobile_drop li a {
+        padding: 10px 15px;
+    }
+}
+
+/* 햄버거 버튼 클릭 시 메뉴 보이기 */
+.show_mobile_menu #mobile_menu {
+    display: block;
+}
+
 
 /* footer ================================================== */
 #main_footer {

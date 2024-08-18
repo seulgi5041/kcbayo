@@ -206,3 +206,83 @@ swiper-slide.wrap_slide2 img {
     opacity: 1; /* Show overlay and title on hover */
     display: block; /* Ensure title is visible */
 }
+
+
+
+/* 미디어 쿼리 */
+@media (max-width: 1208px) {
+    .header_nav .nav > li {
+        padding: 0 10px;
+    }
+    .header_nav .nav > li > a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_wrap .header_title {
+        margin-left: 2%;
+    }
+    .main_wrap .header_title h1 {
+        font-size: 2rem;
+    }
+    .main_wrap .header_title h5 {
+        font-size: 1.2rem;
+    }
+    .field_area {
+        flex-direction: column;
+        align-items: center;
+    }
+    .field_card {
+        width: 90%;
+    }
+    .technical_around {
+        flex-direction: column;
+    }
+    .around_img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 640px) {
+    .header_nav .nav > li {
+        padding: 0 5px;
+    }
+    .header_nav .nav > li > a {
+        font-size: 1em;
+    }
+    .product_field .product_title {
+        font-size: 1.4rem;
+    }
+    .product_field .bg_img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header_nav .nav > li {
+        padding: 0 3px;
+    }
+    .header_nav .nav > li > a {
+        font-size: 0.9em;
+    }
+    .main_wrap .header_title h1 {
+        font-size: 1.5rem;
+    }
+    .main_wrap .header_title h5 {
+        font-size: 1rem;
+    }
+    .footer_lnb ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_lnb .info li,
+    .footer_lnb .adress li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .footer_lnb .info li::after,
+    .footer_lnb .adress li::after {
+        display: none;
+    }
+}
